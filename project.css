@@ -1,0 +1,91 @@
+/* The project view is a spacious, full-screen editorial study. */
+.denim-art{display:grid;place-items:center;background:#e5e0d7}
+.denim-art>img{width:100%;height:100%;object-fit:contain;padding:35px 40px 47px;transition:transform .45s ease}
+.project:hover .denim-art>img{transform:scale(1.025)}
+#project-board>span:first-child{font:inherit;letter-spacing:inherit}
+#project-dialog{width:100%;height:100dvh;max-width:none;max-height:none;margin:0;padding:0;inset:0}
+#project-dialog .dialog-top{position:sticky;top:0;z-index:3;background:var(--paper);padding:14px var(--gutter);border-bottom:1px solid var(--line)}
+#project-dialog .close{min-height:44px;padding:10px 0 10px 20px}
+.project-content{max-width:1400px;margin:0 auto;padding:40px var(--gutter) 65px}
+#project-dialog h2{font-size:clamp(52px,7vw,108px);margin-top:15px}
+#project-dialog .dialog-description{max-width:800px;font-size:16px;line-height:1.85}
+#project-dialog .dialog-image{margin:40px 0 48px}
+#project-dialog .detail-grid{gap:55px;margin-bottom:35px}
+.project-chapter{border-top:1px solid var(--line);padding-top:42px;margin-top:70px}
+.chapter-heading{display:grid;grid-template-columns:.6fr 1.5fr 1.7fr;gap:30px;align-items:start;margin-bottom:35px}
+.chapter-heading>.eyebrow{font-size:9px;padding-top:9px}
+.chapter-heading h3{font:500 clamp(32px,3.7vw,54px)/1.05 var(--serif);letter-spacing:-.025em;color:var(--burgundy)}
+.chapter-heading p{font-size:13px;line-height:1.85;color:var(--muted);max-width:430px}
+.chapter-images{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.chapter-image{min-width:0}
+.chapter-image img{width:100%;height:auto;object-fit:contain;background:var(--sand)}
+.chapter-image figcaption{font-size:8px;margin-top:14px;color:var(--muted);line-height:1.8}
+.chapter-image-wide{grid-column:1/-1;width:100%;max-width:1000px;margin:0 auto 15px}
+#project-dialog .dialog-gallery{margin-top:70px;border-top:1px solid var(--line);padding-top:35px;gap:36px}
+#project-dialog .dialog-gallery figure img{height:auto;max-height:660px;object-fit:contain;background:var(--sand)}
+#project-dialog #project-board{margin-top:45px}
+#project-dialog .dialog-bottom button{min-height:44px}
+@media(max-width:760px){.project-content{padding:25px 22px 40px}#project-dialog .dialog-top{padding:9px 22px;gap:16px}#project-dialog .dialog-top .eyebrow{font-size:7px}#project-dialog .close{font-size:8px;white-space:nowrap}#project-dialog h2{font-size:54px;margin-top:15px}#project-dialog .dialog-description{font-size:14px}#project-dialog .dialog-image{margin:28px 0 32px}.project-chapter{margin-top:45px;padding-top:28px}.chapter-heading{display:block;margin-bottom:25px}.chapter-heading>.eyebrow{padding:0;margin-bottom:14px}.chapter-heading h3{font-size:36px;margin-bottom:14px}.chapter-heading p{font-size:12px}.chapter-images{grid-template-columns:1fr;gap:30px}.chapter-image-wide{margin:0;max-width:none}.chapter-image figcaption{font-size:7px;margin-top:12px}#project-dialog .dialog-gallery{gap:18px;margin-top:45px;padding-top:25px}#project-dialog .dialog-gallery figure img{max-height:400px}#project-dialog .detail-grid{margin-bottom:25px}#project-dialog .dialog-bottom button{font-size:8px}}
+
+/* Project 03 uses the established project layout with individually extracted visuals. */
+.sleeve-art{background:#e7e0d7}
+.sleeve-art>img{width:100%;height:100%;object-fit:contain;padding:35px 25px 47px;transition:transform .45s ease}
+.project:hover .sleeve-art>img{transform:scale(1.025)}
+#project-dialog[data-project="2"] .detail-grid p,#project-dialog[data-project="2"] .chapter-heading p{font-size:16px}
+#project-dialog[data-project="2"] .chapter-image figcaption,#project-dialog[data-project="2"] .dialog-gallery figcaption{font-size:14px;letter-spacing:.02em}
+#project-dialog[data-project="2"] .dialog-gallery{grid-template-columns:minmax(0,1fr);max-width:720px}
+@media(max-width:760px){.sleeve-art>img{padding:34px 10px 54px}.sleeve-art .placeholder-label{font-size:7px}.sleeve-art .placeholder-corner{font-size:7px}.archive-project:has(.sleeve-art) .project-caption{display:block}.archive-project:has(.sleeve-art) .project-caption>span{display:block;margin-top:8px;font-size:10px}#project-dialog[data-project="2"] .dialog-description{font-size:16px}}
+
+/* Project 04 follows the same editorial chapters as the existing work. */
+.brutalist-art{background:#dfd7ce}
+.brutalist-art>img{width:100%;height:100%;object-fit:contain;padding:35px 25px 47px;transition:transform .45s ease}
+.project:hover .brutalist-art>img{transform:scale(1.025)}
+.project-credit{font-size:14px;line-height:1.7;color:var(--muted);margin:0 0 22px}
+#project-dialog[data-project="3"] .detail-grid p,#project-dialog[data-project="3"] .chapter-heading p{font-size:16px}
+#project-dialog[data-project="3"] .chapter-image figcaption,#project-dialog[data-project="3"] .dialog-gallery figcaption{font-size:14px;letter-spacing:.02em}
+#project-dialog[data-project="3"] .dialog-gallery{grid-template-columns:minmax(0,1fr);max-width:720px}
+.archive-project:has(.brutalist-art) .project-caption{display:block}
+.archive-project:has(.brutalist-art) .project-caption>span{display:block;margin-top:8px;font-size:12px}
+@media(max-width:760px){.brutalist-art>img{padding:34px 10px 54px}.brutalist-art .placeholder-label,.brutalist-art .placeholder-corner{font-size:7px}.archive-project:has(.brutalist-art) .project-caption h3{font-size:22px}.archive-project:has(.brutalist-art) .project-caption>span{font-size:10px}#project-dialog[data-project="3"] .dialog-description{font-size:16px}.project-credit{font-size:14px}}
+
+/* Éclipse follows the existing full-screen project structure. */
+.eclipse-art{background:#e8e0d6}.eclipse-art>img{width:100%;height:100%;object-fit:contain;padding:35px 25px 47px;transition:transform .45s ease}.project:hover .eclipse-art>img{transform:scale(1.025)}
+#project-dialog[data-project="4"] .detail-grid p,#project-dialog[data-project="4"] .chapter-heading p{font-size:16px}
+#project-dialog[data-project="4"] .chapter-image figcaption{font-size:14px;letter-spacing:.02em}
+#project-dialog[data-project="4"] .dialog-image{max-width:800px;margin-left:auto;margin-right:auto}
+@media(max-width:760px){.eclipse-art>img{padding:34px 10px 54px}.eclipse-art .placeholder-label,.eclipse-art .placeholder-corner{font-size:7px}.archive-project:has(.eclipse-art) .project-caption{display:block}.archive-project:has(.eclipse-art) .project-caption>span{display:block;margin-top:8px;font-size:10px}#project-dialog[data-project="4"] .dialog-description{font-size:16px}}
+
+.about-copy .cv-download{font-size:14px;min-height:44px;margin-top:25px;width:fit-content;min-width:210px;justify-content:center;padding:14px 22px;border:1px solid var(--burgundy);color:var(--burgundy)}
+.about-copy .cv-download:hover{background:var(--burgundy);color:var(--paper)}
+
+.about-portrait{margin:32px 0 0;max-width:360px}.about-portrait img{display:block;width:100%;height:auto}.about-portrait figcaption{font:14px/1.65 var(--mono);color:var(--muted);margin-top:14px;letter-spacing:.02em}@media(max-width:760px){.about-portrait{max-width:360px;margin:30px 0 38px}.about-portrait figcaption{font-size:12px}}
+
+/* Craftsmanship: verified technique studies and a compact accessory selection. */
+.craft-studies,.craft-accessories{grid-column:1/-1;width:100%;border-top:1px solid var(--line);padding-top:38px}
+.craft-study-heading{display:grid;grid-template-columns:.7fr 1.2fr 1.5fr;gap:28px;align-items:start;margin-bottom:32px}
+.craft-study-heading>.eyebrow{font-size:12px;line-height:1.6;padding-top:8px}
+.craft-study-heading h3{font:500 clamp(34px,3.5vw,52px)/1.05 var(--serif);letter-spacing:-.025em;color:var(--burgundy)}
+.craft-study-heading>p,.technique-study p,.accessory-copy p{font-size:16px;line-height:1.75;color:var(--muted)}
+.technique-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;align-items:start}
+.technique-study{min-width:0}.technique-study>img{width:100%;height:auto;display:block;background:var(--paper)}
+.technique-study figcaption{margin-top:22px}.technique-study h4,.accessory-copy h4{font:500 29px/1.1 var(--serif);margin-bottom:12px}
+.technique-study figcaption>span{display:block;margin-top:16px;font:11px/1.7 var(--mono);color:var(--muted);letter-spacing:.02em}
+.accessory-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px;align-items:start}
+.accessory-image{display:block;width:100%;padding:0;background:var(--paper);cursor:pointer}
+.accessory-image img{display:block;width:100%;height:auto}.accessory-copy{padding-top:22px}
+.accessory-copy .text-link{font-size:13px;margin-top:20px;min-height:44px;min-width:0}
+@media(max-width:760px){.craft-study-heading{display:block;margin-bottom:26px}.craft-study-heading>.eyebrow{padding:0;margin-bottom:14px}.craft-study-heading h3{font-size:39px;margin-bottom:14px}.technique-grid,.accessory-grid{grid-template-columns:1fr;gap:36px}.craft-studies,.craft-accessories{padding-top:28px}.technique-study figcaption{margin-top:18px}.technique-study figcaption>span{font-size:12px}.accessory-copy .text-link{width:100%}}
+.technique-study figcaption{font-family:Arial,sans-serif;letter-spacing:0}.technique-study h4,.accessory-copy h4{margin:0 0 12px}
+
+/* New workshop selection: original photographs, separate from the main projects. */
+.craft-copy>p:not(.craft-lead){font-size:16px;max-width:390px}
+.craft-figure img{height:auto;max-height:none;object-fit:contain}.craft-figure figcaption{font-size:12px;line-height:1.6}
+.craft .text-link{font-size:14px;min-height:44px}
+.accessory-study>img{display:block;width:100%;height:auto}
+.technique-study figcaption{font-family:Arial,sans-serif;letter-spacing:0}
+.craft-study-heading h3{margin:0}.craft-study-heading>p{margin:0}
+.craft-detail{margin-top:18px;border-top:1px solid var(--line)}
+.craft-detail summary{cursor:pointer;font:14px/1.6 var(--mono);color:var(--burgundy);padding:14px 0;min-height:44px}
+.craft-detail img{width:100%;height:auto;display:block;margin:0 0 18px}
+.craft-detail summary:focus-visible{outline:2px solid var(--burgundy);outline-offset:4px}
+@media(max-width:760px){.craft-figure{width:100%}.craft-study-heading h3{margin-bottom:14px}.craft-figure figcaption{font-size:12px}.craft-copy>p:not(.craft-lead){font-size:16px}}
